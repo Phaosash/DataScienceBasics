@@ -1,0 +1,54 @@
+So following through the statistics part of the tutorial, some difference I'm noticing:
+    - Using the tutorials exact code (StatsTest.py), provides a different output to what is
+      shown in the tutorial.
+    - According to the tutorial the output for standard deviation should look like the following:
+        Duration            42.862432
+        Average_Pulse       14.580131
+        Max_Pulse           16.353571
+        Calorie_Burnage    273.384624
+        Hours_Work           3.911718
+        Hours_Sleep          0.661895
+        dtype: float64
+
+      But the output that I get for the deviation is: 170.92
+      Which even when using print(full_health_data.describe()), doesn't relate to any of the data sets.
+      Best guess is that the figure of 170.92 is the standard deviation for the entire data set, not the
+      individual components.
+
+    - This is the same result I was getting in my initial tests, when I was attempting to follow OOP principles more
+      closely for this part of the project. Which in hindsight might have been overengineering things at this point.
+
+    - Similar to the standard deviation, the calculation output for the coefficient of variation also displays a different
+      result, according to the turorial the output should look like:
+        Duration           0.367051
+        Average_Pulse      0.124857
+        Max_Pulse          0.140043
+        Calorie_Burnage    2.341122
+        Hours_Work         0.033498
+        Hours_Sleep        0.005668
+        dtype: float64
+      
+      The output I'm seeing for this calculation is: 1.463
+      Again can't help but wonder if its just calculating the coefficient of variation for the full data set, but even when
+      using their code as written, I can't figure out how their output is breaking it down via category. And there is nothing
+      I can see in the tutorial, that explains how they get this output.
+
+    - So either I'm doing something wrong, or the tutorial is showing the wrong output.
+
+    - After having completed the Statistics Variance section, it appears as though the previous sections for Standard deviation
+      and coefficient of variation are missing steps. As with the previous sections just using the code as written in the tutorial
+      will lead to different output to what is indicated. However if you perform the calculations for each step and use the result of
+      those calculations for the output then the output will be the same as whats indicated in the turorial.
+      
+      Actual output from their supplied code (StatsTest.py): 29214.73211783993
+
+      Output from actual code used (VarianceTest.py):
+        Duration             4594.619184
+        Average_Pulse         294.503084
+        Max_Pulse             572.009577
+        Calorie_Burnage    145278.819481
+        Hours_Work          12646.487270
+        Hours_Sleep         11901.954111
+        dtype: float64
+
+    
