@@ -51,4 +51,8 @@ So following through the statistics part of the tutorial, some difference I'm no
         Hours_Sleep         11901.954111
         dtype: float64
 
-    
+Correlation:
+Correlation is used to measure teh numerical relationship between two variables. A high correlation coefficient (close to 1), doesn't
+mean that we can for sure conclude an actual relationship between two variables. Example:
+  During summer, the sale of icecream at a beach increases. While at the same time the number of drowning accidents also increases.
+This doesn't mean that the increase in ice cream sales, is the direct cause of the increased drowning accidents.
