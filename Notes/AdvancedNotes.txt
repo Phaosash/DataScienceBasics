@@ -1,0 +1,67 @@
+Regression Table Information:
+                                OLS Regression Results
+    ==============================================================================
+    Dep. Variable:        Calorie_Burnage   R-squared:                       0.000
+    Model:                            OLS   Adj. R-squared:                 -0.006
+    Method:                 Least Squares   F-statistic:                   0.04975
+    Date:                Fri, 06 Mar 2026   Prob (F-statistic):              0.824
+    Time:                        13:37:58   Log-Likelihood:                -1145.8
+    No. Observations:                 163   AIC:                             2296.
+    Df Residuals:                     161   BIC:                             2302.
+    Df Model:                           1
+    Covariance Type:            nonrobust
+    =================================================================================
+                        coef    std err          t      P>|t|      [0.025      0.975]
+    ---------------------------------------------------------------------------------
+    Intercept       346.8662    160.615      2.160      0.032      29.682     664.050
+    Average_Pulse     0.3296      1.478      0.223      0.824      -2.588       3.247
+    ==============================================================================
+    Omnibus:                      124.542   Durbin-Watson:                   1.620
+    Prob(Omnibus):                  0.000   Jarque-Bera (JB):              938.541
+    Skew:                           2.927   Prob(JB):                    1.58e-204
+    Kurtosis:                      13.195   Cond. No.                         811.
+    ==============================================================================
+
+    Notes:
+    [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+- Dep. Variable: is short for "Dependent Variable". Calorie_Burnage is here the dependent variable. 
+  The Dependent variable is here assumed to be explained by Average_Pulse.
+- Model: OLS is short for Ordinary Least Squares. This is a type of model that uses the Least Square
+  method.
+- Date: and Time: shows the date and time the output was calculated in Python.
+- Coef is short for coefficient. It is the output of the linear regression function.
+
+The linear regression function can be rewritten mathematically as:
+
+Calorie_Burnage = 0.3296 * Average_Pulse + 346.8662
+These numbers means:
+    - If Average_Pulse increases by 1, Calorie_Burnage increases by 0.3296 (or 0,3 rounded)
+    - If Average_Pulse = 0, the Calorie_Burnage is equal to 346.8662 (or 346.9 rounded).
+    - Remember that the intercept is used to adjust the model's precision of predicting!
+
+The "Statistics of the Coefficients Part" in Regression Table
+    Now, we want to test if the coefficients from the linear regression function has a significant impact on the dependent variable (Calorie_Burnage).
+
+    This means that we want to prove that it exists a relationship between Average_Pulse and Calorie_Burnage, using statistical tests.
+
+    There are four components that explains the statistics of the coefficients:
+        - std err stands for Standard Error
+        - t is the "t-value" of the coefficients
+        - P>|t| is called the "P-value"
+        - [0.025  0.975] represents the confidence interval of the coefficients
+
+The P-value
+The P-value is a statistical number to conclude if there is a relationship between Average_Pulse and Calorie_Burnage.
+
+We test if the true value of the coefficient is equal to zero (no relationship). The statistical test for this is called Hypothesis testing.
+    - A low P-value (< 0.05) means that the coefficient is likely not to equal zero.
+    - A high P-value (> 0.05) means that we cannot conclude that the explanatory variable affects the dependent variable 
+      (here: if Average_Pulse affects Calorie_Burnage).
+    - A high P-value is also called an insignificant P-value.
+
+R - Squared
+R-Squared and Adjusted R-Squared describes how well the linear regression model fits the data points:
+The value of R-Squared is always between 0 to 1 (0% to 100%).
+    - A high R-Squared value means that many data points are close to the linear regression function line.
+    - A low R-Squared value means that the linear regression function line does not fit the data well.
